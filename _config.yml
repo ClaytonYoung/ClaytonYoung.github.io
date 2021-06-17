@@ -2,9 +2,9 @@
 permalink:           pretty
 
 # Setup
-title:               Z.W. Miller
-tagline:             A Moderately Okay Data Science Blog
-url:                 http://zwmiller.github.io
+title:               Clayton Young
+tagline:             A blog..?
+url:                 http://ClaytonYoung.github.io
 paginate:            2
 baseurl:             ""
 
@@ -17,14 +17,13 @@ sass:
 
 # About/contact
 author:
-  name:              Zach Miller
-  url:               https://twitter.com/zaglamir
-  email:             zach@thisismetis.com
+  name:              Clayton Young
+  email:             jcyoung91@gmail.com
 
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/zwmiller
+  repo:              https://github.com/ClaytonYoung
 
 # Gems
 gems:
