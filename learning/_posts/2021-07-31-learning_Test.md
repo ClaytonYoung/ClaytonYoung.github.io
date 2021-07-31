@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: learning
 blog: learning
 ---
