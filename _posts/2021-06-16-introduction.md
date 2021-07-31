@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introduction
+type: personal
 ---
 
 ## **Greetings!**
