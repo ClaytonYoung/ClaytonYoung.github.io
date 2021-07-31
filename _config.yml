@@ -1,3 +1,11 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
 # Setup
 title: Clayton's blog
 tagline: Data, science, and other thoughts
