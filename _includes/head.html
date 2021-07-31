@@ -9,10 +9,9 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
-
   <link rel="stylesheet" href="{{ 'styles.css' | relative_url }}">
-  <link rel="clayton_scarf" sizes="144x144" href="{{ '/assets/clayton_scarf.png'}}">
-  <link rel="clayton_scarf" href="{{ '/assets/clayton_scarf.ico'}}">
+  <link rel="clayton_scarf" sizes="144x144" href="{{ '/assets/clayton_scarf.png'| prepend: site.baseurl | prepend: site.url}}">
+  <link rel="clayton_scarf" href="{{ '/assets/clayton_scarf.ico'| prepend: site.baseurl | prepend: site.url}}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
 
   {% seo title=false %}
