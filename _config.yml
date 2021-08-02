@@ -9,9 +9,9 @@ relative_permalinks: false
 # Setup
 title:            C L A Y T O N
 tagline:          Hello
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+description:      'hi'
+url:              https://claytonyoung.github.io/
+baseurl:          https://claytonyoung.github.io/
 
 author:
   name:           
