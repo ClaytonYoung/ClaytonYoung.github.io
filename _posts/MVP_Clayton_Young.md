@@ -1961,7 +1961,7 @@ plt.ylabel('Station')
 
 
 
-![png](MVP_Clayton_Young_files/output_45_1.png)
+![png](/ClaytonYoung/assets/MVP_Clayton_Young_files/output_45_1.png)
 
 
 ```python
@@ -2020,7 +2020,7 @@ plt.ylabel('Counts')
 
 
 
-![png](MVP_Clayton_Young_files/output_48_1.png)
+![png](/ClaytonYoung/assets/MVP_Clayton_Young_files/output_48_1.png)
 
 
 Looks like wedn,thurs, and fri are most popular days of week for this line on average
@@ -2077,8 +2077,7 @@ plt.ylabel('Count')
 
 
 
-
-![png](MVP_Clayton_Young_files/output_52_1.png)
+![png](/ClaytonYoung/assets/MVP_Clayton_Young_files/output_52_1.png)
 
 
 # Summary
