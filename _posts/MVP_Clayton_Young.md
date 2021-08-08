@@ -1,13 +1,13 @@
 # Clayton Young MVP
 
 
+
 ```python
 import pandas as pd
 from datetime import date, datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
-
 
 ```python
 #http://web.mta.info/developers/turnstile.html
@@ -72,7 +72,6 @@ dates
 
 
 
-
 ```python
 #saving output of fxn to df
 def rac(a_list, url):
@@ -84,11 +83,9 @@ def rac(a_list, url):
 turnstiles_df = rac(dates, link)
 ```
 
-
 ```python
 TURNSTILES_DF = turnstiles_df.copy()
 ```
-
 
 ```python
 turnstiles_df.shape
@@ -98,7 +95,6 @@ turnstiles_df.shape
 
 
     (6488049, 11)
-
 
 
 
@@ -116,13 +112,11 @@ turnstiles_df.columns
 
 
 
-
 ```python
 # Take the date and time fields into a single datetime column
 turnstiles_df["DATE_TIME"] = pd.to_datetime(turnstiles_df.DATE + " " + turnstiles_df.TIME, 
                                             format="%m/%d/%Y %H:%M:%S")
 ```
-
 
 ```python
 turnstiles_df.head()
@@ -246,7 +240,6 @@ turnstiles_df.head()
 
 
 ### Data cleaning
-
 
 
 ```python
@@ -386,7 +379,6 @@ turnstiles_df.head()
 
 Decent amount of duplicates... why?
 
-
 ```python
 mask = ((turnstiles_df["C/A"] == "B024") & 
 (turnstiles_df["UNIT"] == "R211") & 
@@ -471,7 +463,6 @@ turnstiles_df[mask].head()
 
 Recovery files are likely the issue. What percentage of the data are the recovery files?
 
-
 ```python
 turnstiles_df.DESC.value_counts()['REGULAR']/turnstiles_df.DESC.value_counts().sum()
 
@@ -485,7 +476,6 @@ turnstiles_df.DESC.value_counts()['REGULAR']/turnstiles_df.DESC.value_counts().s
 
 
 * 99% of data is regular. Remove the recovery entries and proceed. 
-
 
 ```python
 turnstiles_df = turnstiles_df[(turnstiles_df['DESC']=='REGULAR')]
@@ -635,14 +625,12 @@ turnstiles_df = turnstiles_df[(turnstiles_df['DESC']=='REGULAR')]
 
 
 
-
 ```python
 # Get rid of other duplicate entry
 turnstiles_df.sort_values(["C/A", "UNIT", "LINENAME", "SCP", "STATION", "DATE_TIME"], 
                           inplace=True, ascending=False)
 turnstiles_df.drop_duplicates(subset=["C/A", "UNIT", "LINENAME", "SCP", "STATION", "DATE_TIME"], inplace=True)
 ```
-
 
 ```python
 #check shape out now after filtering 
@@ -660,13 +648,11 @@ turnstiles_df.shape
 
 ## Deal with odd counter behaviour (repeats/turnover)
 
-
 ```python
 turnstiles_daily_hourly = (turnstiles_df
                         .groupby(["C/A", "UNIT", "LINENAME", "SCP", "STATION", "DATE_TIME"],as_index=False)
                         .EXITS.first())
 ```
-
 
 ```python
 turnstiles_daily_hourly[["PREV_DATE_TIME", "PREV_EXITS"]] = (turnstiles_daily_hourly
@@ -676,7 +662,6 @@ turnstiles_daily_hourly[["PREV_DATE_TIME", "PREV_EXITS"]] = (turnstiles_daily_ho
 
     <ipython-input-60-c05671fe7afe>:1: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
       turnstiles_daily_hourly[["PREV_DATE_TIME", "PREV_EXITS"]] = (turnstiles_daily_hourly
-
 
 
 ```python
@@ -857,13 +842,11 @@ turnstiles_daily_hourly
 
 Drop rows where there isn't a previous date-we can't find how many entries there were for those days without the preceeding info. 
 
-
 ```python
 turnstiles_daily_hourly.dropna(subset=["PREV_DATE_TIME"], axis=0, inplace=True)
 ```
 
 Check out data some more-find the negative diffs. 
-
 
 ```python
 turnstiles_daily_hourly[turnstiles_daily_hourly["EXITS"] < turnstiles_daily_hourly["PREV_EXITS"]].head()
@@ -968,7 +951,6 @@ turnstiles_daily_hourly[turnstiles_daily_hourly["EXITS"] < turnstiles_daily_hour
 
 
 
-
 ```python
 (turnstiles_daily_hourly[turnstiles_daily_hourly["EXITS"] < turnstiles_daily_hourly["PREV_EXITS"]]
     .groupby(["C/A", "UNIT", "LINENAME", "SCP", "STATION"])
@@ -991,7 +973,6 @@ turnstiles_daily_hourly[turnstiles_daily_hourly["EXITS"] < turnstiles_daily_hour
                            00-03-03  JKSN HT-ROOSVLT       1
     PTH04  R551  1         00-04-02  GROVE STREET          1
     Length: 424, dtype: int64
-
 
 
 
@@ -1177,7 +1158,6 @@ turnstiles_daily_hourly[(turnstiles_daily_hourly['C/A']=='R523')&
 
 Using counter max at 500K because looking at 4-hour basis
 
-
 ```python
 def get_daily_hourly_counts(row, max_counter):
     counter = row["EXITS"] - row["PREV_EXITS"]
@@ -1200,7 +1180,6 @@ def get_daily_hourly_counts(row, max_counter):
 turnstiles_daily_hourly["HOURLY_EXITS"] = turnstiles_daily_hourly.apply(get_daily_hourly_counts, axis=1, max_counter=500000)
 ```
 
-
 ```python
 turnstiles_daily_hourly.sort_values('HOURLY_EXITS', ascending = False)
 turnstiles_daily_hourly['HOURLY_EXITS'].max()
@@ -1214,7 +1193,6 @@ turnstiles_daily_hourly['HOURLY_EXITS'].max()
 
 
 Average weekday ridership for the past 5 years is roughyl 5.5 million. We can assume that our filter and max counter is working correctly but may be too stringent. Note that the pandemic hit New York hard and people relocated during this time. 
-
 
 ```python
 turnstiles_daily_hourly.sort_values('HOURLY_EXITS', ascending = False)
@@ -1230,7 +1208,6 @@ turnstiles_daily_hourly.groupby(pd.Grouper(freq='b', key = 'DATE_TIME'))['HOURLY
 
 
 ### find hourly exits per turnstile
-
 
 ```python
 ca_unit_station_daily_hourly = turnstiles_daily_hourly.groupby(["C/A","LINENAME", "UNIT", "STATION", "DATE_TIME"])[['HOURLY_EXITS']].sum().reset_index()
@@ -1319,7 +1296,6 @@ ca_unit_station_daily_hourly.head()
 
 
 ## Sums of hourly exits for CA/line/unit/station
-
 
 ```python
 station_daily_hourly = turnstiles_daily_hourly.groupby(["C/A",'LINENAME', "UNIT", "STATION", "DATE_TIME"])[['HOURLY_EXITS']].sum().reset_index()
@@ -1410,7 +1386,6 @@ station_daily_hourly.head()
 ## Sums for station and linename for hourly exits. 
 Keeping linename to prevent confusion of stations with similar/same names.
 
-
 ```python
 station_daily_hourly = turnstiles_daily_hourly.groupby(["STATION", "LINENAME", "DATE_TIME"])[['HOURLY_EXITS']].sum().reset_index()
 station_daily_hourly.head()
@@ -1488,7 +1463,6 @@ station_daily_hourly.head()
 
 
 ## Hourly exits sorted by station/line for 2021
-
 
 ```python
 station_totals_hourly = station_daily_hourly.groupby(['STATION', 'LINENAME']).sum()\
@@ -1655,7 +1629,6 @@ station_totals_hourly.head(20)
 - find weekly averages
 - find daily averages
 - find hourly (4 hour) averages
-
 
 
 ```python
@@ -1963,7 +1936,6 @@ station_daily_hourly.groupby([pd.Grouper(key='STATION'),pd.Grouper(key='LINENAME
 
 Plot weekly averages (median)
 
-
 ```python
 weekly_plot_data=pd.DataFrame(station_daily_hourly.groupby([pd.Grouper(key='STATION'),pd.Grouper(freq='W', key='DATE_TIME')]).median('HOURLY_EXITS')\
                         .groupby('STATION').mean('HOURLY_EXITS').sort_values('HOURLY_EXITS', 
@@ -1989,8 +1961,7 @@ plt.ylabel('Station')
 
 
 
-![png](MVP_Clayton_Young_files/MVP_Clayton_Young_46_1.png)
-
+![png](MVP_Clayton_Young_files/output_45_1.png)
 
 
 ```python
@@ -2017,14 +1988,12 @@ station_daily_hourly[station_daily_hourly['STATION'] == '34 ST-HERALD SQ']\
 
 
 
-
 ```python
 days_of_week_data=pd.DataFrame(station_daily_hourly[station_daily_hourly['STATION'] == '34 ST-HERALD SQ']\
                                         .groupby([pd.Grouper(freq='d', key='DATE_TIME'),'dayofweek']).median()\
                                         .sort_values(['HOURLY_EXITS'], ascending=False).head(55).value_counts('dayofweek'))\
                                         .reset_index()
 ```
-
 
 ```python
 days_of_week_data=days_of_week_data.rename(columns={0:'COUNTS'})
@@ -2051,11 +2020,10 @@ plt.ylabel('Counts')
 
 
 
-![png](MVP_Clayton_Young_files/MVP_Clayton_Young_49_1.png)
+![png](MVP_Clayton_Young_files/output_48_1.png)
 
 
 Looks like wedn,thurs, and fri are most popular days of week for this line on average
-
 
 ```python
 common_day_times=station_daily_hourly[(station_daily_hourly['STATION'] == '34 ST-HERALD SQ') &
@@ -2071,7 +2039,6 @@ common_day_times=station_daily_hourly[(station_daily_hourly['STATION'] == '34 ST
                    
 ```
 
-
 ```python
 common_day_times.DATE_TIME.dt.hour.value_counts()
 ```
@@ -2083,7 +2050,6 @@ common_day_times.DATE_TIME.dt.hour.value_counts()
     12    18
     16     7
     Name: DATE_TIME, dtype: int64
-
 
 
 
@@ -2112,7 +2078,7 @@ plt.ylabel('Count')
 
 
 
-![png](MVP_Clayton_Young_files/MVP_Clayton_Young_53_1.png)
+![png](MVP_Clayton_Young_files/output_52_1.png)
 
 
 # Summary
