@@ -1964,7 +1964,7 @@ plt.ylabel('Station')
 
 
 
-![png](assets/output_45_1.png)
+<img src="assets/output_45_1.png" alt="">
 
 
 ```python
@@ -2023,7 +2023,7 @@ plt.ylabel('Counts')
 
 
 
-![png](assets/output_48_1.png)
+<img src="assets/output_48_1.png" alt="">
 
 
 Looks like wedn,thurs, and fri are most popular days of week for this line on average
@@ -2080,7 +2080,8 @@ plt.ylabel('Count')
 
 
 
-![png](assets/output_52_1.png)
+
+<img src="assets/output_52_1.png" alt="">
 
 # Summary
 
