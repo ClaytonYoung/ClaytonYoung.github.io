@@ -2080,7 +2080,7 @@ plt.ylabel('Count')
 
 
 
-![png](/ClaytonYoung/assets/MVP_Clayton_Young_files/output_52_1.png)
+![png](ClaytonYoung/assets/MVP_Clayton_Young_files/output_52_1.png)
 
 
 # Summary
