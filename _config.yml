@@ -7,9 +7,9 @@ permalink:        pretty
 relative_permalinks: false
 
 # Setup
-title:            C L A Y T O N
-tagline:          Hello
-description:      'hi'
+title:            C L A Y
+tagline:          
+description:      'thoughts, projects, and anything, really...'
 url:              https://claytonyoung.github.io/
 baseurl:          https://claytonyoung.github.io/
 
