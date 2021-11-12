@@ -1,7 +1,7 @@
 ---
-Title: Targeting High-Risk Individuals for Heart Disease
+## Targeting High-Risk Individuals for Heart Disease
 ---
-### Clayton Young
+
 
 ## Abstract
 
