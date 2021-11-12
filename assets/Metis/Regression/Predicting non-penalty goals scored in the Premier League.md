@@ -1,7 +1,7 @@
 ---
 Title: Predicting non-penalty goals scored in the Premier League
 ---
-### Clayton Young
+Clayton Young
 
 ## Abstract
 
