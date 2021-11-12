@@ -1,8 +1,6 @@
 ---
 layout: page
 title: About
-nav_order: 1
-has_children: true
 ---
 
 I'm a clinical research coordinator at the University of California, San Francisco, working in our neurology department's Memory and Aging Center. Currently ensuring my lab runs smoothly and working on data analysis & visualization (R), experiment creation (Qualtrics, Javascript, E-Prime), and a few manuscripts! 
