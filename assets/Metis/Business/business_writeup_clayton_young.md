@@ -1,5 +1,5 @@
 ---
-Title: Heart Disease Risk
+title: Heart Disease Risk 
 ---
 
 ## Abstract
