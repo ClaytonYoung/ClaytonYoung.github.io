@@ -1,6 +1,4 @@
----
-title: Regression MVP
----
+Regression MVP
 
 
 ![image](https://github.com/ClaytonYoung/ClaytonYoung.github.io/blob/master/assets/Metis/pic.png?raw=true)
