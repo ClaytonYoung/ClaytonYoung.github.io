@@ -40,4 +40,4 @@ xgboost for boosted model
 pickle for saving and reading files
 
 
-![image](https://github.com/ClaytonYoung/ClaytonYoung.github.io/blob/master/assets/Metis/Classification/forest_confusion.png)
+![image](https://github.com/ClaytonYoung/ClaytonYoung.github.io/blob/master/assets/Metis/Classification/forest_confusion.png?raw=true)
