@@ -1,5 +1,5 @@
 ---
-## Targeting High-Risk Individuals for Heart Disease
+Title: Targeting High-Risk Individuals for Heart Disease
 ---
 
 
