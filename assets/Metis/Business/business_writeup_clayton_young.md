@@ -1,7 +1,8 @@
 ---
 Title: Heart Disease
----
 # Heart Disease
+---
+
 
 ## Abstract
 
