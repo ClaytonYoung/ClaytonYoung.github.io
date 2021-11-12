@@ -1,7 +1,9 @@
 ---
-Title:  MTA Food Truck Traffic
+title: MTA Food Truck Traffic EDA
 ---
+
 ## Highest Exiting Foot Traffic for MTA Stations in the Bronx to Increase Potential Sales of Food Truck Business
+
 ### Clayton Young
 ### Abstract
 One of this dataset's strengths is our ability to see where and when people are entering and exiting each MTA station. Therefore, I thought to utilize this data to increase potential sales by capitalizing on exiting foot traffic on different days at different times. Specifically, I wanted to build a food truck stop schedule informed by finding the highest average exiting foot traffic by week, day, and hour in the Bronx. After cleaning my data and thinking about how best to approach this problem, I created plots for each day of the week that informed the schedule created for my client.
