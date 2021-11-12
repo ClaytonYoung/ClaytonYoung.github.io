@@ -1,5 +1,5 @@
 ---
-title: MTA Food Truck Traffic EDA
+title: MTA Food Truck Foot Traffic 
 ---
 
 ## Highest Exiting Foot Traffic for MTA Stations in the Bronx to Increase Potential Sales of Food Truck Business
