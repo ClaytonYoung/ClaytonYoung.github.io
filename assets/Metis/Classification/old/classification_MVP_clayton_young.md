@@ -1,6 +1,3 @@
-## Classification MVP
-
-### Clayton Young
 
 ![photo](knn_cv_accuracy.png)
 
