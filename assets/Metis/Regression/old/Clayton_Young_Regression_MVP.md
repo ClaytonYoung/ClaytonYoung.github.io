@@ -1,4 +1,6 @@
-## Clayton_Young_Regression_MVP
+---
+title: About
+---
 
 
 ![image](https://github.com/ClaytonYoung/ClaytonYoung.github.io/blob/master/assets/Metis/pic.png?raw=true)
