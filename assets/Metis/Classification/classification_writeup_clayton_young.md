@@ -1,4 +1,7 @@
-# Classification Project Write-up
+---
+title: Dementia Classification
+---
+
 ## Predicting Dementia Status
 ### Clayton Young
 
