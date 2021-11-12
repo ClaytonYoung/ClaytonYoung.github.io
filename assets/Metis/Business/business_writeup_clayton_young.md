@@ -19,7 +19,7 @@ We hypothesize that interventions such as exercise and diet recommendations targ
 **Secondary impact:** Improve overall health 
 
 
-### Solution path
+## Solution path
 
 **Suggested:** Recommend targeted lifestyle changes for those classified as high risk using a decision tree segregating on:
 - Age (65+)
@@ -29,11 +29,11 @@ We hypothesize that interventions such as exercise and diet recommendations targ
 **Other solution paths:**
 - Recommend government subsidizes for programs known to benefit cardiovascular health
 
-### Measures of success
+## Measures of success
 **Technical:** Model accurately classifies individuals as high risk for poor cardiovascular health.  
 **Non-technical:** Interventions recommended to those classified as high risk for poor cardiovascular health decrease the annual heart disease-related deaths by 1%. 
 
-### Assumptions and risks
+## Assumptions and risks
 **Assumptions:** 
 - Heart disease will remain the lead cause of death in the United States 
 - There are demographic risk factors 
@@ -44,7 +44,7 @@ We hypothesize that interventions such as exercise and diet recommendations targ
 - Groups that have historically been subject to unethical treatment from governmental programs may be unlikely to respond to NHIS despite high risk for poor cardiovascular health and will therefore be unaccounted for in model. 
 - Money spent on interventions is not guaranteed to improve cardiovascular health since lifestyle interventions cannot be implemented unwillingly. 
 
-### Models
+## Models
 Using NHIS data, we'll build a tree model that'll classify individuals as at high risk for poor cardiovascular health based on the demographic features explored in this project. Since CDC doesn't have access to individual health data beyond the NHIS, models will need to be used at healthcare facilities for validation and testing, taking into account the region of the organization, as well as other factors seen to predict cardiovascular health. 
 
 ## Data
@@ -54,7 +54,7 @@ The 2019 NHIS dataset contains 31,997 data points with 534 features. A data dict
 ### Feature Engineering (Excel)
 Because most NHIS data had been coded as numeric values that represented a category, those values were recoded to the text description in a sheet after filtering for columns of relevance/interest. We also collapsed the Angina, Heart Attack, Heart Disease, and High Cholesterol variables into a single variable representing overall cardiovascular health. This was used as the variable of interest moving forward. 
 
-## Analysis (Excel and Tableau)
+### Analysis (Excel and Tableau)
 This data represented the uneven population sizes in the United States. Thus, we could not compare which groups made up a majority of those with poor cardiovascular health as this would've misrepresented what features contribute to a person being at risk. For example, since there's a larger sample of Non-Hispanic Whites in the dataset, we cannot conclude that Non-Hispanic Whites have higher rates of poor cardiovascular health by looking at the proportion of Non-Hispanic Whites in the total number of those with poor cardiovascular health. So instead, a better measure of demographic differences was used–we looked at the proportion of those with poor cardiovascular health *within* a feature of interest. 
 
 Using the method above, we found that in the NHIS data, 57% of individuals over the age of 65 have poor cardiovascular health. Males also have higher rates, and there's a larger proportion of poor cardiovascular health at younger ages for high BMI groups. Although multiple aggregations were used, the ones kept in the dashboard include Age, Cardiovascular Health, Sex, Race, Region. 
