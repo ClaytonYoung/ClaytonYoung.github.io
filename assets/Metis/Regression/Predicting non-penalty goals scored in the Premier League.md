@@ -1,5 +1,5 @@
 ---
-Title: Predicting non-penalty goals scored in the Premier League
+Title: Goal Predictions
 ---
 Clayton Young
 
