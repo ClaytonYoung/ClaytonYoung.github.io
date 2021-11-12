@@ -1,7 +1,4 @@
----
-Title: Heart Disease
-# Heart Disease
----
+Heart Disease
 
 
 ## Abstract
