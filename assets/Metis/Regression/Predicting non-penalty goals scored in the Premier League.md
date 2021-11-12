@@ -1,7 +1,6 @@
 ---
-Title: Goal Predictions
+title: Goal Predictions
 ---
-Clayton Young
 
 ## Abstract
 
