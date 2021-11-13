@@ -46,7 +46,7 @@ Although I was interested in county/continent and GDP and created an interaction
 - calculating MSE and MAE
 - plotting residuals, QQ plot
 
-![image](/qq.png)
+![image](/assets/Metis/Regression/qq.png)
 
 
 ## Findings
@@ -61,7 +61,7 @@ linear model with polynomial features outpeforms others:
 - continent is not a good predictor of number of goals scored
 - GDP is not a good predictor or number of goals scored
 
-![image]('/scatter.png')
+![image](/assets/Metis/Regression/scatter.png)
 
 ## Tools
 - Selenium for web scraping
