@@ -65,4 +65,4 @@ Using the method above, we found that in the NHIS data, 57% of individuals over 
 - Tableau for interactive visualizations
 
 
-<iframe src="https://public.tableau.com/views/cardiovascularhealthindicators/Nice?:embed=yes&:display_count=yes&:showVizHome=no"" width = '650' height = '450'></iframe>
+<iframe src="https://public.tableau.com/views/cardiovascularhealthindicators/Nice?:embed=yes&:display_count=yes&:showVizHome=no" width = '650' height = '450'></iframe>
