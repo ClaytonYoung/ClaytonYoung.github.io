@@ -7,9 +7,9 @@ permalink:        pretty
 relative_permalinks: false
 
 # Setup
-title:            CLAYTON
+title:            "Clayton's blog"
 tagline:          
-description:      'thoughts, projects, and anything, really...'
+description:      'Thoughts, projects, and anything, really...'
 url:              https://claytonyoung.github.io/
 baseurl:          https://claytonyoung.github.io/
 
@@ -22,5 +22,5 @@ paginate:         5
 # Custom vars
 version:          2.1.0
 
-github:
-  repo:           
+github:     https://github.com/ClaytonYoung/ClaytonYoung.github.io
+  repo:     https://github.com/ClaytonYoung/ClaytonYoung.github.io      
