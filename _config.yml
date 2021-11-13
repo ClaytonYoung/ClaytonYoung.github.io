@@ -7,7 +7,7 @@ permalink:        pretty
 relative_permalinks: false
 
 # Setup
-title:            "Clayton's Blog"
+title:            "Clayton\'s Blog"
 tagline:          
 description:      'Thoughts, projects, and anything, really...'
 url:              https://claytonyoung.github.io/
