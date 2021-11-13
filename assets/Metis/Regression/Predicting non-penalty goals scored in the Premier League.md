@@ -18,7 +18,7 @@ First, I scraped all PL league data from the inception of the league to the pres
 
 Although I was interested in county/continent and GDP and created an interaction variable, this proved detrimental to the model and was therefore dropped. Ultimately, I only kept 2091 rows and six columns for my entire dataset. The features kept were shots, position, team (also collapsed), and the interaction variable for positionXshots.
 
-![image]('/interaction.png')
+![image](/assets/Metis/Regression/interaction.png)
 
 ## Sources:
 - FBRef
@@ -46,7 +46,7 @@ Although I was interested in county/continent and GDP and created an interaction
 - calculating MSE and MAE
 - plotting residuals, QQ plot
 
-![image]('/qq.png')
+![image](/qq.png)
 
 
 ## Findings
