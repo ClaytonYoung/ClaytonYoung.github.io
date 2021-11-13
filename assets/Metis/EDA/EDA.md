@@ -35,3 +35,6 @@ After calculating the central tendency for each station's turnstile per-hourly (
 - pandas for manipulation
 - datetime to convert data into datetime and select days of week/hours
 - matplotlib and seaborn for visualization
+
+
+![image](https://github.com/ClaytonYoung/ClaytonYoung.github.io/blob/master/assets/Metis/EDA/EDA_calendar_Clayton_Young.pdf)
