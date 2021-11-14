@@ -1,6 +1,8 @@
 ---
-title: Dementia Classification
+title: Classification
 ---
+
+# Dementia Classification
 
 ## Abstract
 My goal with this project was to classify an individual's dementia status. Using data from UCSF's Memory and Aging Center, I pulled four different data sets, including demographics, clinical dementia rating, and two others containing neuropsych testing. The features I used in my final merged dataset was the Mini-Mental Status Exam data, age at testing, gender, handedness, and education. Using F2 as my performance metric, I was able to get hyperparameters from GridSearchCV for a Random Forest model that outperformed the rest, testing for a dementia status derived from a binarized clinical dementia rating (CDR) at a 0.5 threshold. I decided on F2 as the metric of model performance, emphasizing recall over precision since we'd want to minimize false negatives. 
