@@ -21,7 +21,7 @@ After calculating the central tendency for each station's turnstile per-hourly (
 - Merging highest median hourly exits to station line combination with the highest hourly exits per day of the week and hour of day.
 - Counting the number of times stations had the highest median hourly exits per day of the week and hour of day.
 - Averaged the median hourly exits by weekday to come up with single plot to represent weekdays.
-![image](/assets/Metis/EDA/weeklymedian.png)
+![image](/assets/Metis/EDA/dots.png)
 ![image](/assets/Metis/EDA/weekmean.png)
 
 
