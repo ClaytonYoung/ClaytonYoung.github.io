@@ -1,6 +1,8 @@
 ---
-title: Heart Disease Risk 
+title: Business
 ---
+
+# Heart Disease Risk 
 
 ## Abstract
 
