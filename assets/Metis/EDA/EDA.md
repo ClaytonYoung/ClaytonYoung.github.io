@@ -21,6 +21,10 @@ After calculating the central tendency for each station's turnstile per-hourly (
 - Merging highest median hourly exits to station line combination with the highest hourly exits per day of the week and hour of day.
 - Counting the number of times stations had the highest median hourly exits per day of the week and hour of day.
 - Averaged the median hourly exits by weekday to come up with single plot to represent weekdays.
+![image](/assets/Metis/Regression/weeklymedian.png)
+![image](/assets/Metis/Regression/weekmean.png)
+
+
 
 ## Findings
 - 3 AV-149 ST busiest station in the Bronx as measured by the median of hourly exits (973) for 2021.
@@ -36,4 +40,6 @@ After calculating the central tendency for each station's turnstile per-hourly (
 - datetime to convert data into datetime and select days of week/hours
 - matplotlib and seaborn for visualization
 
-<embed src="/Metis/EDA/EDA_calendar_Clayton_Young.pdf" type="application/pdf">
+
+![image](/assets/Metis/Regression/EDA_calendar_Clayton_Young.png)
+
