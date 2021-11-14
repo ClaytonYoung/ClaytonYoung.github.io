@@ -1,6 +1,8 @@
 ---
-title: Goal Predictions
+title: Regression
 ---
+
+# Goal Predictions
 
 ## Abstract
 
