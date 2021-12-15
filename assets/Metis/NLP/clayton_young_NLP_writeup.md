@@ -5,72 +5,50 @@ title: Unsupervised NLP
 
 ## Abstract
 
-Having been around r/Wallstreetbets during the Gamestop saga, it was easy to find myself sucked into another subreddit while out sick during Thanksgiving break. Whether it's a fad or life-changing technology, I grew fascinated by the movement within the cryptocurrency sphere (cryptosphere?) and wanted to check it out.  Using Reddit's API and PRAW to gather all the comments and posts for November, I topic modeled some of the commonly mentioned cryptos and ran sentiment analysis using Vader and Deeopmoji. I found a few topics unique to some cryptos and found Algorand was pretty well-liked compared to others, at least for November. 
+Having been around r/Wallstreetbets during the Gamestop saga, it was easy to find myself sucked into another subreddit while out sick during Thanksgiving break. Whether it's a fad or life-changing technology, I grew fascinated by the movement within the cryptocurrency sphere (cryptosphere?) and wanted to check it out.  Using Reddit's API and PRAW to gather all the comments and posts for October and November, I topic modeled some of the commonly mentioned cryptos and ran sentiment analysis using Vader and Deeopmoji. I found a few topics unique to some cryptos and found Algorand was pretty well-liked compared to others, at least for November. 
 
 ## Design
 
-My metric of interest is the number of non-penalty goals scored in a PL season. I decided upon non-penalty goals since it's a better representation of player skill and ability. I considered which variables available would accurately predict the number of goals a player scores in a season to target this metric. Aiming not to use predictor variables that had this answer within itself (e.g., conversion rate). I sought to use proxies for underlying characteristics (e.g., red cards for aggression). Additionally, I used player country data to see differences in player performance, as measured by the number of non-penalty goals scored, by country/region.
-
+I gathered all data from October to December from r/CryptoCurrency and performed topic modeling for a few different cryptos to see what topics were discussed for each. To do this, I created a dictionary where keys are the names of cryptos and any comment that **only** mentions that crypto was saved to that key, allowing me to topic model and perform sentiment analysis for each crypto.
 
 ## Data
 
-First, I scraped all PL league data from the inception of the league to the present. However, as my project question shifted, I began scraping player data for each season. This included four pages of data per season (1992-present), and in total, ~65 columns of data per player, per season, located inside a dictionary with a key representing the year. Filtering included selecting data from the 2017-2018 season to 2021. This was due to missing data from the previous seasons. Pulling from Wikipedia and YourDicitonary, I matched country abbreviations in FBRef to each player's data, and after matching country, I scraped GDP data and matched it to each player.
-
-Although I was interested in county/continent and GDP and created an interaction variable, this proved detrimental to the model and was therefore dropped. Ultimately, I only kept 2091 rows and six columns for my entire dataset. The features kept were shots, position, team (also collapsed), and the interaction variable for positionXshots.
-
-![image](/assets/Metis/Regression/interaction.png)
+In total, I had over 2 million comments from Oct 1 to Dec 12. However, once I filtered out duplicate comments (bots or otherwise meaningless) and those without any votes (not popular, not representative), I was left with only a few thousand in total. From there, I created the dictionaries, saving the crypto's shorthand as the key and any comment that mentions only that crypto as a value inside the key. Initially, I performed preprocessing with NLTK and ran topic modeling with PCA; however, the results weren't as interesting as I would've liked. From there, I used spaCy to tag all nouns and adjectives, as these would be most relevant. I also combined the dfs in the dict together and created a count vectorizer which allowed me to find the most common words across *all* cryptos–these offered nothing to the topic modeling, so I added these to the stopwords, which contained all names of all cryptos (pulled from coinmarketcap using Selenium). Finally, I decided to keep only a few cryptos, in which comments ranged from ~3K to 20K+. 
 
 ## Sources:
-- FBRef
-- YourDictionary
-- Wikipedia
+- Reddit API
+- coinmarketcap
+- Deepmoji
 
 ## Algorithms
-- Web scraping links using Selenium from FBRef and saving links to list for further webscraping of dataframes
-- Saving scraped dataframes to dictionary and appending to master dataframe
-- Collapsing country, position, team data
-- Feature engineering collapsed continent data to continentXGDP
-- Feature engineering shotXposition data using engineered position data
-- Engineering dummy variabels for linear regression using Pandas
-- Transforming predictor and dependent variables using BoxCox transformation using sklearn
-- Plotting interaction terms to verify different slopes using Seaborn
-- Pairplotting using Seaborn to understand distrubutions of variables of interest
-- linear modeling using statsmodels
-- calculating cook's d to check influence of outliers (statsmodels)
-- calculating VIF for independent variable correlations (statsmodels)
-- cross validation(KFold) of basic linear, ridge, lasso, elastic net models
-- averaging CV scores
-- transforming to polynomial features
-- plotting LARS path for lasso model
-- scaling data for regularization
-- calculating MSE and MAE
-- plotting residuals, QQ plot
-
-![image](/assets/Metis/Regression/qq.png)
-
+- Web scraping crypto names using Selenium from coinmarketcap
+- Reddit API data collection
+- Count vect, tfidf vect
+- regex searching
+- PCA/TSVD
+- NLTK preprocessing
+- Vader sentiment, deepmoji
+- spaCy processing
+- Emojiclouds
+- PCA finding how many components to capture 80% variance
+-others, I'm sure
 
 ## Findings
 
-linear model with polynomial features outpeforms others:
+![image](/assets/Metis/NLP/topics.png)
+-Based on sentiment, Algorand is a fan favorite. 
 
-- R^2: 0.788
-- MSE: 2.020
-- MAE: 0.871
-
-- linear model not suited for this type of count-like (integer) data
-- continent is not a good predictor of number of goals scored
-- GDP is not a good predictor or number of goals scored
-
-![image](/assets/Metis/Regression/scatter.png)
 
 ## Tools
 - Selenium for web scraping
-- request for static web scraping (opted for Selenium after)
 - BeautfulSoup for formatting scraped data
 - Pandas for data transformation
 - pickle for storing data
-- numpy for transformation (log didn't work too well for this data)
-- matplotlib for plotting
-- scipy stats for tranformation
+- numpy for transformation
+- deepmoji sentiment analysis
+- NLTK processing 
 - sklearn for modeling
-- seaborn for plotting
+- contractions to remove contractions
+- spaCy for parts of speech tagging
+- vader for sentiment analysis
+- praw for data collection
