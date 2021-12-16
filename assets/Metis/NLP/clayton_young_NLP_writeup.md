@@ -31,12 +31,12 @@ In total, I had over 2 million comments from Oct 1 to Dec 12. However, once I fi
 - spaCy processing
 - Emojiclouds
 - PCA finding how many components to capture 80% variance
--others, I'm sure
+- others, I'm sure
 
 ## Findings
 
 ![image](/assets/Metis/NLP/topics.png)
--Based on sentiment, Algorand is a fan favorite. 
+- Based on sentiment, Algorand is a fan favorite. 
 
 
 ## Tools
