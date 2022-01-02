@@ -1,4 +1,6 @@
-# Data science projects 
+----
+Title: Data science projects 
+----
 
 This is where I'm hosting my data science projects I completed while at Metis. Within each folder, you should find a notebook, presentation slides, and a project writeup, as well as any ancillary files/folders. Thanks for visiting!
 
