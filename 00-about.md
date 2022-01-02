@@ -3,8 +3,10 @@ title: About
 
 ---
 
-I'm a clinical research coordinator at the University of California, San Francisco, working in our neurology department's Memory and Aging Center. Currently ensuring my lab runs smoothly and working on data analysis & visualization (R), experiment creation (Qualtrics, Javascript, E-Prime), and a few manuscripts! 
+I'm a data scientist currently ensuring UCSF's [Decision Lab](https://decisionlab.ucsf.edu) runs smoothly. My interests range from public health and governance to financial markets and crypto–-all of which can benefit from data science. 
 
-My research experience provides me with a background in data collection and analysis in EEG/ERPs and eye-tracking during my time as an undergrad working on attention, semantic and syntactic processing, and visual working memory. Following undergrad, I gained clinical experience as a psychometrist, where I administered an array of cognitive batteries to patients with cognitive deficits. I'm currently using my combination of experience and interests to explore decision-making in clinical populations with dementia using behavioral economic paradigms and (f)MRI. 
+I've recently bolstered my technical skills and interest in working with data by completing [Metis'](https://www.thisismetis.com/bootcamps/online-data-science-bootcamp) data science Bootcamp. My projects covered exploratory data analysis, linear regression, web scraping, classification, unsupervised learning, natural language processing, and business. 
 
-I'm focused on learning more about data science and sharpening my technical skills. Enrolled in [Metis' Data Science Bootcamp](https://www.thisismetis.com).
+I've spent the past few years in academia investigating decision-making in older adults and managing a lab with three different federally funded projects. Of equal importance, I've also helped develop a lab culture based on respect, kindness, and humor, which has weathered our team through an otherwise troubling pandemic. 
+
+Enjoy using both R and Python!
