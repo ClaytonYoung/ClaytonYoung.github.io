@@ -35,13 +35,13 @@ I set aside 20% of my data for testing (900). Although I used Grid/RandomizedSea
 ## Tools
 
 
-Numpy and Pandas for data manipulation
-Scikit-learn for modeling
-Matplotlib, Seaborn, Bokeh, and selenium for plotting
-datatime for date features
-mlxtend for stacking model
-xgboost for boosted model
-pickle for saving and reading files
+- Numpy and Pandas for data manipulation
+- Scikit-learn for modeling
+- Matplotlib, Seaborn, Bokeh, and selenium for plotting
+- datatime for date features
+- mlxtend for stacking model
+- xgboost for boosted model
+- pickle for saving and reading files
 
 
 ![image](/assets/Metis/Classification/forest_confusion.png?raw=true)
