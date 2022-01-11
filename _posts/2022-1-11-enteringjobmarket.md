@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Entering the job market!
-date: 2022-01-11
 ---
 
 I'll return to this post
