@@ -23,8 +23,8 @@ After calculating the central tendency for each station's turnstile per-hourly (
 - Merging highest median hourly exits to station line combination with the highest hourly exits per day of the week and hour of day.
 - Counting the number of times stations had the highest median hourly exits per day of the week and hour of day.
 - Averaged the median hourly exits by weekday to come up with single plot to represent weekdays.
-![image](/assets/python/EDA/dots.png)
-![image](/assets/python/EDA/weekmean.png)
+![image](/projects/python/EDA/images/dots.png)
+![image](/projects/python/EDA/images/weekmean.png)
 
 
 ## Findings
@@ -42,5 +42,5 @@ After calculating the central tendency for each station's turnstile per-hourly (
 - matplotlib and seaborn for visualization
 
 
-![image](/assets/python/EDA/EDA_calendar_Clayton_Young.png)
+![image](/projects/python/EDA/images/EDA_calendar_Clayton_Young.png)
 
