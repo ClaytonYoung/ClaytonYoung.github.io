@@ -1,24 +1,67 @@
 ---
+# layout for a single blog post / article
 layout: default
+comments: true
 ---
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+
+      {% if page.author %}
+      &bull; written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+
+      {% if page.comments == true and site.disqus.shortname %}
+      &bull; <a class="disqus-comment-count" href="{{ page.url | absolute_url }}#disqus_thread" data-disqus-identifier="{{ page.url }}">Comments</a>
+      {% endif %}
+    </div>
+
+  </header>
+
+  {% assign page_content = page.content %}
+  {% if page.description %}
+    {% assign page_excerpt = page.description %}
+  {% elsif site.excerpt_separator and page.content contains site.excerpt_separator %}
+    {% assign page_excerpt = page.content | split: site.excerpt_separator | first %}
+    {% assign page_content = page.content | split: site.excerpt_separator | last %}
+  {% endif %}
+
+  <div class="intro excerpt">
+    {{ page_excerpt }}
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ page_content }}
+  </div>
+
+  <div class="post-footer">
+
+  </div>
+
+  <div class="related">
+    <h4>Possibly Related Musings:</h4>
+    <ul class="related-posts">
+      {% for post in site.related_posts limit:3 %}
       <li>
-        <h3>
-          <a href="{{ post.url }}">
+          <a href="{{ post.url | prepend: site.baseurl }}">
             {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
           </a>
-        </h3>
       </li>
-    {% endfor %}
-  </ul>
-</div>
+      {% endfor %}
+    </ul>
+  </div>
+
+</article>
+
+{% if page.comments == true and site.disqus.shortname %}
+{% include disqus.html %}
+{% endif %}
