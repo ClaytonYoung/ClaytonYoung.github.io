@@ -24,3 +24,8 @@ version:          2.1.0
 
 github: https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects
   repo: https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects
+  
+  social-network-links:
+  email: "jcyoung91@gmail.com"
+  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  github: ClaytonYoung
