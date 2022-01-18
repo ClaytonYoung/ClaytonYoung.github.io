@@ -35,7 +35,7 @@ In total, I had over 2 million comments from Oct 1 to Dec 12. However, once I fi
 
 ## Findings
 
-![image](/assets/Metis/NLP/topics.png)
+![image](/assets/python/NLP/topics.png)
 - Based on sentiment, Algorand is a fan favorite. 
 
 
