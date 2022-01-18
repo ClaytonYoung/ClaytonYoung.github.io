@@ -1,4 +1,4 @@
-# GARP 
+GARP 
 
 Clayton Young
 4/6/2020
