@@ -1,5 +1,5 @@
 ----
-Title: Different works
+Different works
 ----
 
 This is where I'm hosting different works I've done separated by language. 
