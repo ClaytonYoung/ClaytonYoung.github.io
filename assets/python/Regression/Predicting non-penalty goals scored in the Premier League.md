@@ -20,7 +20,7 @@ First, I scraped all PL league data from the inception of the league to the pres
 
 Although I was interested in county/continent and GDP and created an interaction variable, this proved detrimental to the model and was therefore dropped. Ultimately, I only kept 2091 rows and six columns for my entire dataset. The features kept were shots, position, team (also collapsed), and the interaction variable for positionXshots.
 
-![image](/assets/Metis/Regression/interaction.png)
+![image](/assets/python/Regression/interaction.png)
 
 ## Sources:
 - FBRef
@@ -48,7 +48,7 @@ Although I was interested in county/continent and GDP and created an interaction
 - calculating MSE and MAE
 - plotting residuals, QQ plot
 
-![image](/assets/Metis/Regression/qq.png)
+![image](/assets/python/Regression/qq.png)
 
 
 ## Findings
@@ -63,7 +63,7 @@ linear model with polynomial features outpeforms others:
 - continent is not a good predictor of number of goals scored
 - GDP is not a good predictor or number of goals scored
 
-![image](/assets/Metis/Regression/scatter.png)
+![image](/assets/python/Regression/scatter.png)
 
 ## Tools
 - Selenium for web scraping
