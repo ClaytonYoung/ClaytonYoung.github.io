@@ -30,7 +30,7 @@ kNN, Logistic Regression, Random Forest, XGBoost, Ensemble Validation, Stacking,
 
 I set aside 20% of my data for testing (900). Although I used Grid/RandomizedSearchCV to tune my models, I also set aside 25% of my training data (900 data points) for validation after Grid/RandomizedSearchCV. Across these sets, my Random Forest model obtained a training f2 score of 0.882, validation f2 of 0.874, and test validation f2 of 0.872. It also achieved the highest ROC AUC score at 0.856. 
 
-![image](/assets/python/Classification/ROC_classification.png?raw=true)
+![image](/assets/python/Classification/images/ROC_classification.png?raw=true)
 
 ## Tools
 
@@ -44,4 +44,4 @@ I set aside 20% of my data for testing (900). Although I used Grid/RandomizedSea
 - pickle for saving and reading files
 
 
-![image](/assets/python/Classification/forest_confusion.png?raw=true)
+![image](/assets/python/Classification/images/forest_confusion.png?raw=true)
