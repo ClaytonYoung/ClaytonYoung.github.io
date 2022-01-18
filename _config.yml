@@ -19,6 +19,12 @@ author: Clayton Young
 
 paginate:         5
 
+include:
+  - .htaccess
+  - _pages
+  - _articles
+  - _data
+
 # Custom vars
 version:          2.1.0
 
