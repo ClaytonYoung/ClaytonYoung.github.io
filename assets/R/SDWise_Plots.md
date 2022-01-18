@@ -1,6 +1,4 @@
----
----
-# SDWISE plots
+SDWISE plots
 Clayton Young
 6/17/2020
 
