@@ -13,7 +13,7 @@ description:      'Thoughts, projects, and anything, really...'
 url:              https://claytonyoung.github.io/
 baseurl:          https://claytonyoung.github.io/
 
-author:
+author: Clayton Young
   name:           
   url:            
 
@@ -22,5 +22,5 @@ paginate:         5
 # Custom vars
 version:          2.1.0
 
-github: 
-  repo: 
+github: https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects
+  repo: https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects
