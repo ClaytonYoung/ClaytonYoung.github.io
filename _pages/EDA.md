@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Exploratory Data Analysis
+permalink: /eda/
 ---
 
 # MTA Food Truck Foot Traffic 
