@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 h2 {
   margin-top: 1rem;
@@ -331,6 +331,19 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+}
+
+ul.post-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.post {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2em;
 }
 
 /* Blog post or page title */
