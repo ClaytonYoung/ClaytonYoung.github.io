@@ -5,7 +5,8 @@ email:
   fa-icon: 'fa-envelope-square'
 
 github:
-  href: 'https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects'
+  id: 'ClaytonYoung'
+  href: 'https://github.com/'
   title: 'GitHub'
   fa-icon: 'fa-github-square'
 
@@ -15,8 +16,4 @@ linkedin:
   title: 'LinkedIn'
   fa-icon: 'fa-linkedin-square'
 
-rss:
-  id: '/feed.xml'
-  href:
-  title: 'RSS'
-  fa-icon: 'fa-rss-square'
+
