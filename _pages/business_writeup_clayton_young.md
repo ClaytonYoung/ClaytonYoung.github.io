@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Business
+permalink: /business/
 ---
 
 # Heart Disease Risk 
