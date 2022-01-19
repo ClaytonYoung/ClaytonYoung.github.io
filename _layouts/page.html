@@ -1,8 +1,14 @@
 ---
+# layout for a non-blog page
 layout: default
 ---
 
-<div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
+<article class="page">
+  <h1 class="post-title page-title">{{ page.title | escape }}</h1>
   {{ content }}
-</div>
+
+</article>
+
+{% if page.comments == true and site.disqus.shortname %}
+{% include disqus.html %}
+{% endif %}
