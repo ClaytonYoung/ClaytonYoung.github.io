@@ -37,7 +37,7 @@ description:  # this means to ignore newlines until "baseurl:"
 #
 # see also:  http://downtothewire.io/2015/08/15/configuring-jekyll-for-user-and-project-github-pages/
 # and:  https://github.com/jekyll/jekyll/pull/5399
-baseurl:  ""  # empty for GitHub User page; "/your-repo" (NO trailing slash) for Project page
+baseurl:  "https://claytonyoung.github.io"  # empty for GitHub User page; "/your-repo" (NO trailing slash) for Project page
 url:  # pretty sure this is auto-set during build, so I'd leave it alone if I were you
 
 
