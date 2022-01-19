@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-
+order: 1
 ---
 
 I'm a data scientist currently ensuring UCSF's [Decision Lab](https://decisionlab.ucsf.edu) runs smoothly. My interests range from public health and governance to financial markets and crypto–-all of which can benefit from data science. 
