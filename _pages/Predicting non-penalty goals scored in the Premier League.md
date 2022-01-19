@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Regression
+permalink: /regression/
 ---
 
 # Goal Predictions
