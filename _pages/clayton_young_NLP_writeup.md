@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Unsupervised NLP
+permalink: /unsupervisednlp/
 ---
 # Topic modeling r/CryptoCurrency
 
