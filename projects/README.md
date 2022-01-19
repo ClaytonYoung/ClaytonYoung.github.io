@@ -7,7 +7,7 @@ This is where I'm hosting different works I've done separated by language.
 ### [python](https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects/python)
 - This is where all of my Metis data science projects live. 
 
-### [R]()
+### [R](https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects/R)
 - Going to upload work I did in lab-all of this is done in R
 
 ### [SQL](https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects/sql)
