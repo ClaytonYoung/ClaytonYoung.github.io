@@ -1,0 +1,56 @@
+<div class="posts">
+    <ul class="post-list">
+    {% for post in paginator.posts %}
+        {% if post.published %}
+    <li class="post">
+        <h1 class="post-title">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title | escape }}
+            </a>
+        </h1>
+
+        {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta post-date">{{ post.date | date: date_format }}</span>
+
+
+        {% if site.excerpt_separator and post.content contains site.excerpt_separator %}
+          {% assign post_excerpt = post.content | split: site.excerpt_separator | first %}
+        {% elsif post.description %}
+          {% assign post_excerpt = post.description %}
+        {% else %}
+          {% assign post_excerpt = post.content | truncatewords: 75 %}
+        {% endif %}
+
+        {{ post_excerpt }}
+        {% capture content_words %}
+            {{ post.content | number_of_words }}
+        {% endcapture %}
+        {% capture excerpt_words %}
+            {{ post_excerpt | number_of_words }}
+        {% endcapture %}
+        {% if post_excerpt == post.description or excerpt_words != content_words %}
+        <p class="more-link"> ... <a href="{{ post.url | prepend: site.baseurl }}">read more &raquo;</a>
+        </p>
+        {% endif %}
+    </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>
+
+<div class="pagination">
+    {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+    {% else %}
+    <span class="pagination-item older">Older</span>
+    {% endif %}
+    {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+    {% else %}
+    <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+    {% else %}
+    <span class="pagination-item newer">Newer</span>
+    {% endif %}
+</div>
