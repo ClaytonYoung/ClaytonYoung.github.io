@@ -20,7 +20,7 @@ name:  "Clayton Young"  # your name or organization name
 email: "jcyoung91@gmail.com"
 webaddress: "https://claytonyoung.github.io"  # to avoid messing with url or baseurl
 
-tagline: "Thoughts, projects, and anything, really..."
+tagline: "thoughts and projects"
 description:  # this means to ignore newlines until "baseurl:"
 # There is much confusion around the use of the settings for url and baseurl.
 # With newest version of Jekyll, you *should* only need to specify baseurl,
@@ -43,10 +43,6 @@ url:  # pretty sure this is auto-set during build, so I'd leave it alone if I we
 
 
 # # # # Social, API, etc. settings # # # #
-
-# Disqus settings for comments
-disqus:
-   shortname: jreel-github-io  # see https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 
 # Google analytics
 google_analytics: # add your UA id here
