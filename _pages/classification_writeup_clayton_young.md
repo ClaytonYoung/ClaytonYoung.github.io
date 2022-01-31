@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Classification
+permalink: /classification/
 ---
 
 # Dementia Classification
