@@ -35,17 +35,6 @@ library(knitr) # knitr is part of R Markdown
 library(tidyverse)
 ```
 
-    ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-
-    ## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-    ## ✓ tibble  3.1.5     ✓ dplyr   1.0.7
-    ## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
-    ## ✓ readr   2.0.2     ✓ forcats 0.5.1
-
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
 ``` r
 library(readxl) # readxl is part of tidyverse, but is not "core tidyverse"
 library(lubridate)
@@ -61,53 +50,13 @@ library(lubridate)
 ``` r
 ## Packages from Fleming code----------------------------------------------------------------
 library(rjags)
-```
-
-    ## Loading required package: coda
-
-    ## Linked to JAGS 4.3.0
-
-    ## Loaded modules: basemod,bugs
-
-``` r
 library(magrittr)
-```
-
-    ## 
-    ## Attaching package: 'magrittr'
-
-    ## The following object is masked from 'package:purrr':
-    ## 
-    ##     set_names
-
-    ## The following object is masked from 'package:tidyr':
-    ## 
-    ##     extract
-
-``` r
 library(reshape2)
-```
-
-    ## 
-    ## Attaching package: 'reshape2'
-
-    ## The following object is masked from 'package:tidyr':
-    ## 
-    ##     smiths
-
-``` r
 library(coda)
 library(lattice)
 library(broom)
 library(ggpubr)
 library(ggmcmc)
-```
-
-    ## Registered S3 method overwritten by 'GGally':
-    ##   method from   
-    ##   +.gg   ggplot2
-
-``` r
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = datafolder)
 
@@ -120,61 +69,9 @@ load in qualtrics files
 
 ``` r
 emometa_b_df = read_csv("Emotion Metacognition B_December 21, 2021_18.20.csv")[-1:-2,]
-```
-
-    ## Rows: 75 Columns: 1974
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (1974): StartDate, EndDate, Status, IPAddress, Progress, Duration (in se...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 emometa_a_df = read_csv("Emotion Metacognition A_December 21, 2021_18.19.csv")[-1:-2,]
-```
-
-    ## Rows: 125 Columns: 1974
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (1974): StartDate, EndDate, Status, IPAddress, Progress, Duration (in se...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 memmeta_b_df = read_csv("Memory Metacognition B_December 21, 2021_18.18.csv")[-1:-2,]
-```
-
-    ## Rows: 87 Columns: 2469
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (2469): StartDate, EndDate, Status, IPAddress, Progress, Duration (in se...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 memmeta_a_df = read_csv("Memory Metacognition A_December 21, 2021_18.13.csv")[-1:-2,]
-```
-
-    ## Rows: 92 Columns: 2469
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (2469): StartDate, EndDate, Status, IPAddress, Progress, Duration (in se...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 demographics_df = read_xlsx('metacog_demographics.xlsx')
 ```
 
