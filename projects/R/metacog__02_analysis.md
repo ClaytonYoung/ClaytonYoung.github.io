@@ -19,18 +19,6 @@ required for rjags package
 [JAGS](https://sourceforge.net/projects/mcmc-jags/)
 
 ``` r
-# setup datafolder target
-if (Sys.info()["sysname"] == "Windows"){
-  repofolder <- paste("C:/Users/", Sys.getenv("USERNAME"), "/decisionlab/AgingCog/analysis/Metacog", 
-                      sep = "")
-  datafolder <- "R:/groups/chiong/aging-and-cognition/tasks/metacog/data"
-  rdrivepath <- "R:/"
-} else if (Sys.info()["sysname"] == "Darwin"){ # not sure why MacOS is "Darwin" but it is...
-  repofolder <- "~/decisionlab/AgingCog/analysis/Metacog"
-  datafolder <- "/Volumes/macdata/groups/chiong/aging-and-cognition/tasks/metacog/data/"
-  rdrivepath <- "/Volumes/macdata/"
-} # probably good to add another condition for Unix, later on...
-
 library(knitr) # knitr is part of R Markdown
 library(tidyverse)
 library(readxl) # readxl is part of tidyverse, but is not "core tidyverse"
@@ -73,7 +61,7 @@ corr_df=read_rds('emo_mem_df.rds')%>%
          (z_scores(emologMratio)<2)&
          (z_scores(memlogMratio)<2))
 
-hillblom=read_csv("/Volumes/macdata/groups/chiong/aging-and-cognition/expansive-dataset/HBSpring2020_2020-06-18.csv")
+hillblom=read_csv("/data.csv")
 
 #filtering out data without bsexzscores 
 hillblom=hillblom%>%
