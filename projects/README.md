@@ -8,7 +8,7 @@ This is where I'm hosting different works I've done separated by language.
 - This is where all of my Metis data science projects live. 
 
 ### [R](https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects/R)
-- Going to upload work I did in lab-all of this is done in R
+- Metacog project I've been working on. There's more in R I've done through lab, but I'll keep those in our private repo.
 
 ### [SQL](https://github.com/ClaytonYoung/ClaytonYoung.github.io/tree/master/projects/sql)
 - Most work here will be from interviews and other misc. challenges. I started off using SQlite but moved to PostgresQL, which has more functions. 
