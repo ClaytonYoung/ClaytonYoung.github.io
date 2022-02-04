@@ -119,9 +119,9 @@ memmeta_b_df = memmeta_b_df %>%
 # specify the order (a,b) when using this function. Since nR\_S1, nR\_S2 will be used, we need to assign the randomized order to these two arrays
 
 See
-[\link](https://github.com/LegrandNico/metadPy/tree/7f2916c4c5932b610ee805a4220dee0238f7cc6d)
+[link](https://github.com/LegrandNico/metadPy/tree/7f2916c4c5932b610ee805a4220dee0238f7cc6d)
 
-[\link](https://github.com/embodied-computation-group/EmotionMetamemory)
+[link](https://github.com/embodied-computation-group/EmotionMetamemory)
 
 # nrs1 and nrs2s
 
