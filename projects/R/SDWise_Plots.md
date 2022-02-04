@@ -12,28 +12,6 @@ library(knitr)
 library(tidyverse)
 library(haven)
 ```
-
-Set up directories to repofolder and datafolder:
-
-``` r
-# setup datafolder target
-if (Sys.info()["sysname"] == "Windows") {
-    repofolder <- paste("C:/Users/", Sys.getenv("USERNAME"), "/decisionlab/AgingCog/analysis/Wisdom",
-        sep = "")
-    datafolder <- "R:/groups/chiong/aging-and-cognition/tasks/Wisdom/"
-    rdrivepath <- "R:/"
-} else if (Sys.info()["sysname"] == "Darwin") {
-    # not sure why MacOS is 'Darwin' but it is...
-    repofolder <- "~/decisionlab/AgingCog/analysis/Wisdom"
-    datafolder <- "/Volumes/macdata/groups/chiong/aging-and-cognition/tasks/Wisdom/"
-    rdrivepath <- "/Volumes/macdata/"
-}  # probably good to add another condition for Unix, later on...
-
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = datafolder)
-# comment out (see root.dir above): setwd(datafolder)
-```
-
 ## Import Wisdom csv and save custom palette
 
 ``` r
