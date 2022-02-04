@@ -119,8 +119,9 @@ memmeta_b_df = memmeta_b_df %>%
 # specify the order (a,b) when using this function. Since nR\_S1, nR\_S2 will be used, we need to assign the randomized order to these two arrays
 
 See
-[\!link](https://github.com/LegrandNico/metadPy/tree/7f2916c4c5932b610ee805a4220dee0238f7cc6d)
-[\!link](https://github.com/embodied-computation-group/EmotionMetamemory)
+[\link](https://github.com/LegrandNico/metadPy/tree/7f2916c4c5932b610ee805a4220dee0238f7cc6d)
+
+[\link](https://github.com/embodied-computation-group/EmotionMetamemory)
 
 # nrs1 and nrs2s
 
@@ -365,13 +366,6 @@ emo_mem_df=full_join(emo_df,mem_df, by = c("ExternalReference","emofirst"))%>%
 emo_mem_df=emo_mem_df%>%
   filter(ExternalReference%!in%accuracy$ExternalReference)
 ```
-
-\#meta\_d/d1
-
-[\!need to verify, but it looks like d1 is
-d’](https://github.com/metacoglab/HMeta-d/blob/67514c1368171ed727d9fb24a2e5d4ea0a990904/Matlab/fit_meta_d_mcmc.m)
-
-[\!see also](https://github.com/LegrandNico)
 
 Merge the demogrphics df with the emo\_mem\_df
 
