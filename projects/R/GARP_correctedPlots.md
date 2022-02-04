@@ -240,11 +240,6 @@ for (b in 1:nrow(GARP_DATA)){
     
 
   
-  #label participant responses with the trial number-----removed to reduce clutter
-    #maptools::pointLabel(x=list_mat[[b]][,2],y=list_mat[[b]][,1], labels=sprintf("%d",1:11), cex=.5, allowSmallOverlap = FALSE, doPlot = TRUE, pos =4 )
-    
-
-  
   
   #This stores whether or not there is a GARP violation for each participant in the GARP_DATA data frame
   #True=violation; False=no violation
