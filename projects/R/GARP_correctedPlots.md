@@ -283,7 +283,7 @@ P Matrix
     ## 10     1     2
     ## 11     1     3
 
-![](GARP_correctedPlots_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](https://github.com/ClaytonYoung/ClaytonYoung.github.io/blob/master/projects/R/GARP_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 Now we have x matrices, plots, and a column in our dataframe GARP\_DATA
 that lets us know if a participant has a violation.
