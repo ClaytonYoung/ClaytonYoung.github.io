@@ -22,24 +22,6 @@ library(readxl)
 library(lubridate)
 ```
 
-First, set the directories.
-
-``` r
-if (Sys.info()["sysname"] == "Windows"){
-  repofolder <- paste("C:/Users/", Sys.getenv("USERNAME"), "/decisionlab/DMA/Analysis/GARP_Analysis/", 
-                      sep = "")
-  datafolder <- "R:/groups/chiong/DMA/GARP/GARP_CSV/"
-  rdrivepath <- "R:/"
-} else if (Sys.info()["sysname"] == "Darwin"){ # not sure why MacOS is "Darwin" but it is...
-  repofolder <- "~/decisionlab/DMA/Analysis/GARP_Analysis/"
-  datafolder <- "/Volumes/macdata/groups/chiong/DMA/GARP/GARP_CSV/"
-  rdrivepath <- "/Volumes/macdata/"
-} # probably good to add another condition for Unix, later on...
-
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = paste(datafolder))
-```
-
 Load in the functions we’ll use.
 
 ``` r
