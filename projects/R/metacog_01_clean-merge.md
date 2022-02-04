@@ -33,21 +33,8 @@ if (Sys.info()["sysname"] == "Windows"){
 
 library(knitr) # knitr is part of R Markdown
 library(tidyverse)
-```
-
-``` r
 library(readxl) # readxl is part of tidyverse, but is not "core tidyverse"
 library(lubridate)
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     date, intersect, setdiff, union
-
-``` r
 ## Packages from Fleming code----------------------------------------------------------------
 library(rjags)
 library(magrittr)
