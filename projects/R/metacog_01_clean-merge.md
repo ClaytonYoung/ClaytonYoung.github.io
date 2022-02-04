@@ -12,25 +12,11 @@ Sys.time()
 
     ## [1] "2022-01-17 20:42:20 PST"
 
-Set up directories and load required packages.
-
 Note-you will need to install JAGS to get Fleming’s code to work. It’s
 required for rjags package
 [JAGS](https://sourceforge.net/projects/mcmc-jags/)
 
 ``` r
-# setup datafolder target
-if (Sys.info()["sysname"] == "Windows"){
-  repofolder <- paste("C:/Users/", Sys.getenv("USERNAME"), "/decisionlab/AgingCog/analysis/Metacog", 
-                      sep = "")
-  datafolder <- "R:/groups/chiong/aging-and-cognition/tasks/metacog/data"
-  rdrivepath <- "R:/"
-} else if (Sys.info()["sysname"] == "Darwin"){ # not sure why MacOS is "Darwin" but it is...
-  repofolder <- "~/decisionlab/AgingCog/analysis/Metacog"
-  datafolder <- "/Volumes/macdata/groups/chiong/aging-and-cognition/tasks/metacog/data/"
-  rdrivepath <- "/Volumes/macdata/"
-} # probably good to add another condition for Unix, later on...
-
 library(knitr) # knitr is part of R Markdown
 library(tidyverse)
 library(readxl) # readxl is part of tidyverse, but is not "core tidyverse"
