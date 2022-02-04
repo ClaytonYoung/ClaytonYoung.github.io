@@ -141,13 +141,7 @@ corr_df=read_rds('emo_mem_df.rds')%>%
   drop_na()%>%
   filter((z_scores(emologMratio)<2)&
          (z_scores(memlogMratio)<2))
-```
 
-    ## Warning in log(memMratio): NaNs produced
-
-    ## Warning in log(emoMratio): NaNs produced
-
-``` r
 corr_df%>%
   ggplot(aes(y=emologMratio, x=memlogMratio))+
   #theme_classic get rid of background grid
@@ -186,13 +180,7 @@ outliers_df=read_rds('emo_mem_df.rds')%>%
   mutate(memlogMratio=log(memMratio),
          emologMratio=log(emoMratio))%>%
   drop_na()
-```
 
-    ## Warning in log(memMratio): NaNs produced
-
-    ## Warning in log(emoMratio): NaNs produced
-
-``` r
 print(cor.test(outliers_df$emologMratio,outliers_df$memlogMratio))
 ```
 
