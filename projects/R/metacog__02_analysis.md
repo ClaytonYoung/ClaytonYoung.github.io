@@ -33,33 +33,9 @@ if (Sys.info()["sysname"] == "Windows"){
 
 library(knitr) # knitr is part of R Markdown
 library(tidyverse)
-```
-
-    ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-
-    ## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-    ## ✓ tibble  3.1.5     ✓ dplyr   1.0.7
-    ## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
-    ## ✓ readr   2.0.2     ✓ forcats 0.5.1
-
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
-``` r
 library(readxl) # readxl is part of tidyverse, but is not "core tidyverse"
 library(openxlsx)
 library(lubridate)
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     date, intersect, setdiff, union
-
-``` r
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = datafolder)
 
@@ -96,36 +72,9 @@ corr_df=read_rds('emo_mem_df.rds')%>%
          (memMratio_z<2)&
          (z_scores(emologMratio)<2)&
          (z_scores(memlogMratio)<2))
-```
 
-    ## Warning in log(memMratio): NaNs produced
-
-    ## Warning in log(emoMratio): NaNs produced
-
-``` r
-         #(emometad_z<2)&
-         #(memmetad_z<2)&
-         #(memdprime_z<2)&
-         #(emodprime_z<2))
-  
 hillblom=read_csv("/Volumes/macdata/groups/chiong/aging-and-cognition/expansive-dataset/HBSpring2020_2020-06-18.csv")
-```
 
-    ## Warning: One or more parsing issues, see `problems()` for details
-
-    ## Rows: 4105 Columns: 1223
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (215): link_date, Hand, RaceText, DxEffDate, ClinSynBestEst, ClinSynSecE...
-    ## dbl (999): UnQID, PIDN, age, visit, gap, totalgap, Deceased, Gender, educ, R...
-    ## lgl   (9): TabCATdata, RunDots_P6_C, RunDots_P6_RT, RunDots_P7_C, RunDots_P7...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 #filtering out data without bsexzscores 
 hillblom=hillblom%>%
   filter(!is.na(bsexzscore))%>%
@@ -309,18 +258,13 @@ emo_df=read_rds('emo_mem_df.rds')%>%
          'Date' = RecordedDate)%>%
   drop_na()%>%
   filter(z_scores(emologMratio)<2)
-```
-
-    ## Warning in log(emoMratio): NaNs produced
-
-``` r
 emo_df=left_join(emo_df,bsexz_df,by='ExternalReference')%>%
   drop_na()%>%
   mutate('mcage_scaled'= as.numeric(center_scale(age)/10),
          'mceduc'= as.numeric(center_scale(Educ)),
          'ex_gap'=as.period(interval(start = as_date(link_date), 
                                      end = as_date(RecordedDate)))$year)%>%
-  filter(ex_gap<4 & PIDN!=8594 & PIDN !=31581)
+  filter(ex_gap<4)
   
 
 # memory metacognition pred by bsexz controlling for age, educ, and gender
@@ -395,18 +339,14 @@ emo_outliers_df=read_rds('emo_mem_df.rds')%>%
           'PIDN' = ExternalReference,
          'Date' = RecordedDate)%>%
   drop_na()
-```
 
-    ## Warning in log(emoMratio): NaNs produced
-
-``` r
 emo_outliers_df=left_join(emo_outliers_df,bsexz_df,by='ExternalReference')%>%
   drop_na()%>%
   mutate('mcage_scaled'= as.numeric(center_scale(age)/10),
          'mceduc'= as.numeric(center_scale(Educ)),
          'ex_gap'=as.period(interval(start = as_date(link_date), 
                                      end = as_date(RecordedDate)))$year)%>%
-  filter(ex_gap<4 & PIDN!=8594 & PIDN !=31581)
+  filter(ex_gap<4)
 #outlier model
 summary(lm(emologMratio ~ bsexzscore + mcage_scaled + mceduc + factor(Gender) + factor(emofirst), data = emo_outliers_df))
 ```
@@ -478,18 +418,14 @@ mem_df=read_rds('emo_mem_df.rds')%>%
          'Date' = RecordedDate)%>%
   drop_na()%>%
   filter(z_scores(memlogMratio)<2)
-```
 
-    ## Warning in log(memMratio): NaNs produced
-
-``` r
 mem_df=left_join(mem_df,bsexz_df,by='ExternalReference')%>%
   drop_na()%>%
   mutate('mcage_scaled'= as.numeric(center_scale(age)/10),
          'mceduc'= as.numeric(center_scale(Educ)),
          'ex_gap'=as.period(interval(start = as_date(link_date), 
                                      end = as_date(RecordedDate)))$year)%>%
-  filter(ex_gap<4 & PIDN!=8594 & PIDN !=31581)
+  filter(ex_gap<4)
   
 
 
@@ -566,18 +502,14 @@ mem_outliers_df=read_rds('emo_mem_df.rds')%>%
          'PIDN' = ExternalReference,
          'Date' = RecordedDate)%>%
   drop_na()
-```
 
-    ## Warning in log(memMratio): NaNs produced
-
-``` r
 mem_outliers_df=left_join(mem_outliers_df,bsexz_df,by='ExternalReference')%>%
   drop_na()%>%
   mutate('mcage_scaled'= as.numeric(center_scale(age)/10),
          'mceduc'= as.numeric(center_scale(Educ)),
          'ex_gap'=as.period(interval(start = as_date(link_date), 
                                      end = as_date(RecordedDate)))$year)%>%
-  filter(ex_gap<4 & PIDN!=8594 & PIDN !=31581)
+  filter(ex_gap<4)
 
 summary(lm(memlogMratio ~ bsexzscore + mcage_scaled + mceduc + factor(Gender) + factor(emofirst), data = mem_outliers_df)) 
 ```
