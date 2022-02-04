@@ -62,73 +62,22 @@ WARNING: This script requires users to import a new csv from Qualtrics
 in order to run correctly.
 
 ``` r
-#previous import and filter-now saving colnames as list and importing to dfs
-
-#GARP_DATA_OUTDATED <- read.csv(paste(datafolder, "GARP_DATA.csv", sep=""), na.strings=c(""," ","NA"))[-c(1:2),c(1,7,18:19,34:44)]
-
 #renaming columns-creating list to use to use for col names
 colNames<-read_csv("GARP_DATA.csv", n_max = 0)%>%
   names()%>%
   recode("QI-1" = "PIDN", "Q47" = "Session", "QI-4" = "favChips", "QI-5" = "favCandy", "Q7" = "Example", "Q7_1" = "Q7", "random" = "selectedTrial")
-```
 
-    ## New names:
-    ## * Q7 -> Q7...22
-    ## * Q7 -> Q7...29
-
-    ## Rows: 0 Columns: 48
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (48): StartDate, EndDate, Status, IPAddress, Progress, Duration (in seco...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 #filter out 'test' sessions any pidn with a letter 't' gets filtered
 GARP_df<-read_csv("GARP_DATA.csv",  col_names = colNames, skip = 3)%>%
   filter(!grepl("t", Session) & !grepl("t", PIDN))%>%
   mutate(Session = as.numeric(Session), StartDate = str_replace(StartDate, "\\s[^ ]+$", ""), StartDate = mdy(StartDate),
          EndDate = str_replace(EndDate, "\\s[^ ]+$", ""), EndDate = mdy(EndDate), 
          RecordedDate = str_replace(RecordedDate, "\\s[^ ]+$", ""), RecordedDate = mdy(RecordedDate), Collection = "In-person")
-```
 
-    ## Rows: 130 Columns: 48
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr (12): StartDate, EndDate, IPAddress, RecordedDate, ResponseId, Distribut...
-    ## dbl (32): Status, Progress, Duration (in seconds), Finished, LocationLatitud...
-    ## lgl  (4): RecipientLastName, RecipientFirstName, RecipientEmail, ExternalRef...
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-    ## Warning in mask$eval_all_mutate(quo): NAs introduced by coercion
-
-``` r
 GARPVirtual_df<-read_csv("GARP_DATA_virtual.csv", col_names = colNames, skip = 3)%>%
   filter(!grepl("t", Session) & !grepl("t", PIDN))%>%
   mutate(Session = as.numeric(Session), StartDate = as_date(StartDate), EndDate = as_date(EndDate), RecordedDate = as_date(RecordedDate), Collection = "Online")
-```
 
-    ## Rows: 30 Columns: 47
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## chr   (7): IPAddress, ResponseId, DistributionChannel, UserLanguage, PIDN, c...
-    ## dbl  (33): Status, Progress, Duration (in seconds), Finished, LocationLatitu...
-    ## lgl   (4): RecipientLastName, RecipientFirstName, RecipientEmail, ExternalRe...
-    ## dttm  (3): StartDate, EndDate, RecordedDate
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-``` r
 #count occurrences of PIDNS (the existing 'session' is inaccurate)
 #n counts thee number of times the PIDN has appeared so far, so we're filtering out second+ sessions
 GARP_df<-bind_rows(GARP_df, GARPVirtual_df)%>%
@@ -151,30 +100,10 @@ Create subset of columns for test responses and store as GARP\_Columns
 and store all rows where the test responses weren’t left blank.
 
 ``` r
-#previous method
-
-#GARP_Columns <- GARP_DATA_OUTDATED[ ,5:15] 
-#GARP_DATA_OUTDATED <- GARP_DATA_OUTDATED[complete.cases(GARP_Columns), ] 
-#Lava_OUTDATED<-read.csv(paste(datafolder, "Lava.csv", sep=""), na.strings=c(""," ","NA"))[,c(1,7)]
-#GARP_DATA_OUTDATED$Dx <- Lava$ClinSynBestEst[match(GARP_DATA_OUTDATED$QI.1, Lava$PIDN)]
-#GARP_DATA_OUTDATED<- GARP_DATA_OUTDATED[,c(1,2,4,3,16,5:15)]
-#names(GARP_DATA_OUTDATED)[3]<-"Session"
-#names(GARP_DATA_OUTDATED)[4]<-"PIDN"
-
-
-#TidyVersion of base R above
 Lava_df<-read_xlsx("Lava.xlsx")%>%
   select(as.character('PIDN...1'), ClinSynBestEst)%>%
   rename("PIDN" = "PIDN...1", "Dx" = "ClinSynBestEst")
-```
 
-    ## New names:
-    ## * PIDN -> PIDN...1
-    ## * InstrID -> InstrID...3
-    ## * PIDN -> PIDN...4
-    ## * InstrID -> InstrID...106
-
-``` r
 #TidyVersion of original code w/merging lava data included 
 GARP_DATA<-GARP_df%>%
   select(StartDate, Collection, Finished, PIDN, 'Q1':'Q2-11')%>%
@@ -189,17 +118,6 @@ Import price matrix (relevant columns only).
 ``` r
 P_GARP <- read_csv("P_GARP.csv")[1:11,2:4]
 ```
-
-    ## Rows: 22 Columns: 4
-
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: ","
-    ## dbl (4): Choice Set, Chips, Candy, Available Funds
-
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
 Create a list with all the CS files so they can be called and imported
 
 ``` r
