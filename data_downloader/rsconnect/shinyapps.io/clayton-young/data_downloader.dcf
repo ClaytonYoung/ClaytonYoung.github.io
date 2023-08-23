@@ -1,0 +1,12 @@
+name: data_downloader
+title: data_downloader
+username: clayton-young
+account: clayton-young
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9618220
+bundleId: 7575665
+url: https://clayton-young.shinyapps.io/data_downloader/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
