@@ -1,3 +1,4 @@
+source(file.path('config', '03_data_downloader_setup.R'))
 options("openxlsx.dateFormat" = "mm/dd/yyyy")
 library(shinyjs)
 library(shinyWidgets)
