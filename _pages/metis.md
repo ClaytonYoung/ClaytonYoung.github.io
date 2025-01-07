@@ -11,3 +11,5 @@ permalink: /metis/
 [Unsupervised NLP-sentiment analysis on crypto subreddit](unsupervisednlp)
 
 [business-heart disease risk dashboard](business)
+
+[dementia classification](classification)
