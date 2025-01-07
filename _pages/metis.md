@@ -4,4 +4,4 @@ title: Metis
 permalink: /metis/
 ---
 
-[Exploratory Data Anlysis](/EDA.md)
+[Exploratory Data Anlysis](_pages/EDA.md)
