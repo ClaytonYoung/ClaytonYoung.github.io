@@ -1,9 +1,8 @@
 ---
 layout: page
+title: MTA Food Truck Foot Traffic 
 permalink: /metis/EDA/
 ---
-
-# MTA Food Truck Foot Traffic 
 
 ## Abstract
 One of this dataset's strengths is our ability to see where and when people are entering and exiting each MTA station. Therefore, I thought to utilize this data to increase potential sales by capitalizing on exiting foot traffic on different days at different times. Specifically, I wanted to build a food truck stop schedule informed by finding the highest average exiting foot traffic by week, day, and hour in the Bronx. After cleaning my data and thinking about how best to approach this problem, I created plots for each day of the week that informed the schedule created for my client.
