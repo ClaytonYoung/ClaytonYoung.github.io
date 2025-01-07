@@ -4,16 +4,64 @@ title: Metis
 permalink: /metis/
 ---
 
-[Exploratory Data Anlysis-turnstile calendar](EDA)
-- Analyzed New York MTA data for a hypothetical taco truck business. The insights drawn from here allowed me to create a weekly calendar to capitalize on exiting foot traffic.
+Below are links to projects I completed during my time Metis Data Science BootCamp back in 2021.
 
-[Regression-prediction who will score the most goals](regression)
-- For this project, I used Selenium to scrape a few different sites to predict the number of goals a player would score in a premier league season. Really fun project. Though, I wouldn't use linear regression for this type of problem in the future!
+[Unsupervised NLP – Sentiment Analysis on r/CryptoCurrency](unsupervisednlp)
+Goal: Explore the r/CryptoCurrency subreddit to uncover key discussion topics and sentiment trends.
+Approach & Outcome:
 
-[Unsupervised NLP-sentiment analysis on crypto subreddit](unsupervisednlp)
-- Used unsupervised learning to topic model Reddit comments from r/CryptoCurrency to see what's going on in an area that has a lot of traction at the moment. This was probably the most exciting one of the lot for me since I found myself scrolling through Reddit while sick when trying to come up with project ideas.
+Implemented topic modeling on scraped Reddit comments to identify emerging themes and sentiments in the crypto space.
+Gained insight into the community’s discussions, particularly around market trends, blockchain developments, and investment strategies.
+Highlights:
 
-[business-heart disease risk dashboard](business)
+Delved into the world of unsupervised learning, specifically topic modeling.
+Balanced data exploration with a personal interest in cryptocurrency, turning a hobby into a project filled with exciting discoveries.
 
-[dementia classification](classification)
-- Using UCSF's Memory and Aging data (where I work), I wanted to build a dementia classification model. I built a few different models and tuned their hyperparameters using grid and randomized search cross-validation. This was a great real-world problem, and I'm lucky to have been able to use the data from work!
+
+[Classification – Dementia Classification](classification)
+Goal: Use UCSF’s Memory and Aging data to build a predictive model for dementia.
+Approach & Outcome:
+
+Developed and tuned various classification models (e.g., Random Forest, XGBoost) to predict the likelihood of dementia.
+Employed grid search and randomized search cross-validation to optimize hyperparameters.
+Highlights:
+
+Tackled a real-world problem with direct societal impact, leveraging domain-specific data from my workplace.
+Practiced advanced model selection, evaluation, and tuning techniques critical for production-ready machine learning applications.
+
+
+[Regression – Predicting Who Will Score the Most Goals](regression)
+Goal: Use Selenium and other tools to scrape player statistics and predict the number of goals scored in a Premier League season.
+Approach & Outcome:
+
+Collected data from multiple soccer-related websites, then combined it into a cohesive dataset.
+Built and trained a linear regression model, although in hindsight, a different algorithm may have been more appropriate for this type of prediction.
+Highlights:
+
+Discovered the intricacies of web scraping and data wrangling.
+Learned that model selection and domain knowledge (in this case, sports analytics) are crucial for accurate predictions.
+
+
+[Exploratory Data Analysis – Turnstile Calendar](EDA)
+Goal: Analyze New York MTA data for a hypothetical taco truck business.
+Approach & Outcome:
+
+Examined the MTA turnstile dataset to uncover foot traffic patterns across different times and stations.
+Designed a weekly calendar to schedule optimal taco truck visits, effectively capitalizing on existing commuter traffic.
+Highlights:
+
+Learned to clean and merge large datasets efficiently.
+Gained hands-on experience with exploratory techniques (e.g., data visualization and pivot tables) that guided business-focused decisions.
+
+
+[Business – Heart Disease Risk Dashboard](business)
+Goal: Work with CDC’s NHIS 2019 dataset to outline demographic risk factors for heart disease.
+Approach & Outcome:
+
+Processed and analyzed health survey data to identify risk factors, including age, lifestyle habits, and pre-existing conditions.
+Built an interactive Tableau dashboard that allows stakeholders to explore how different variables correlate with heart disease risk.
+Highlights:
+
+Strengthened data visualization skills, particularly designing clear, intuitive dashboards.
+Learned how domain knowledge (in this case, public health) informs data-driven insights and real-world solutions.
+
