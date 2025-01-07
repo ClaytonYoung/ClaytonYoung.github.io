@@ -80,6 +80,7 @@ linear model with polynomial features outpeforms others:
 - seaborn for plotting
 
 
+<div style="page-break-before: always;"></div>
 
 
 # MTA Food Truck Foot Traffic 
