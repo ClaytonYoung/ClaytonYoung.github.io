@@ -11,4 +11,4 @@ There were different parts to this process. The first was discovery.
 
 I was given a list of instruments users of the data wanted which differed from the instruments found in the prior dataset. Tracking all of this down looked something like this:
 
-[!image](../assets/detailed_flow.png)
+[!image](../assets/detailed_flow.png?raw=true)
