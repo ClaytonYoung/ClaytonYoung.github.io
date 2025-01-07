@@ -4,8 +4,10 @@ title: Metis
 permalink: /metis/
 ---
 
-[Exploratory Data Anlysis](EDA)
+[Exploratory Data Anlysis-turnstile calendar](EDA)
 
-[Regression](regression)
+[Regression-prediction who will score the most goals](regression)
 
-[Unsupervised NLP](unsupervisednlp)
+[Unsupervised NLP-sentiment analysis on crypto subreddit](unsupervisednlp)
+
+[business-heart disease risk dashboard](business)
