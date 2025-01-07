@@ -1,9 +1,8 @@
 ---
 layout: page
+title: Goal Predictions
 permalink: /metis/regression/
 ---
-
-# Goal Predictions
 
 ## Abstract
 
