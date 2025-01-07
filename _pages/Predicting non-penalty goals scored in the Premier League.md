@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Regression
-permalink: /regression/
+permalink: /metis/regression/
 ---
 
 # Goal Predictions
