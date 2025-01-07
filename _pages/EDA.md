@@ -1,3 +1,8 @@
+---
+layout: page
+title: Metis
+permalink: /metis/
+---
 
 # MTA Food Truck Foot Traffic 
 
