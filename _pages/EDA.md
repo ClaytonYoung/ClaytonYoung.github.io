@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exploratory Data Analysis
-permalink: metis/EDA/
+permalink: /metis/EDA/
 ---
 
 # MTA Food Truck Foot Traffic 
