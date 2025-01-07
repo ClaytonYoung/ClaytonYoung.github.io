@@ -6,7 +6,7 @@ permalink: /metis/
 
 Below are links to projects I completed during my time Metis Data Science BootCamp back in 2021.
 
-[Unsupervised NLP – Sentiment Analysis on r/CryptoCurrency](unsupervisednlp)
+##[Unsupervised NLP – Sentiment Analysis on r/CryptoCurrency](unsupervisednlp)
 
 **Goal:** Explore the r/CryptoCurrency subreddit to uncover key discussion topics and sentiment trends.
 
@@ -20,7 +20,7 @@ Delved into the world of unsupervised learning, specifically topic modeling.
 Balanced data exploration with a personal interest in cryptocurrency, turning a hobby into a project filled with exciting discoveries.
 
 
-[Classification – Dementia Classification](classification)
+##[Classification – Dementia Classification](classification)
 
 **Goal:** Use UCSF’s Memory and Aging data to build a predictive model for dementia.
 
@@ -34,7 +34,7 @@ Tackled a real-world problem with direct societal impact, leveraging domain-spec
 Practiced advanced model selection, evaluation, and tuning techniques critical for production-ready machine learning applications.
 
 
-[Regression – Predicting Who Will Score the Most Goals](regression)
+##[Regression – Predicting Who Will Score the Most Goals](regression)
 
 **Goal:** Use Selenium and other tools to scrape player statistics and predict the number of goals scored in a Premier League season.
 
@@ -48,7 +48,7 @@ Discovered the intricacies of web scraping and data wrangling.
 Learned that model selection and domain knowledge (in this case, sports analytics) are crucial for accurate predictions.
 
 
-[Exploratory Data Analysis – Turnstile Calendar](EDA)
+##[Exploratory Data Analysis – Turnstile Calendar](EDA)
 
 **Goal:** Analyze New York MTA data for a hypothetical taco truck business.
 
@@ -62,7 +62,7 @@ Learned to clean and merge large datasets efficiently.
 Gained hands-on experience with exploratory techniques (e.g., data visualization and pivot tables) that guided business-focused decisions.
 
 
-[Business – Heart Disease Risk Dashboard](business)
+##[Business – Heart Disease Risk Dashboard](business)
 
 **Goal:** Work with CDC’s NHIS 2019 dataset to outline demographic risk factors for heart disease.
 
