@@ -5,3 +5,5 @@ permalink: /metis/
 ---
 
 [Exploratory Data Anlysis](EDA)
+
+[Regression](regression)
