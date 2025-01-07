@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Business
-permalink: /business/
+title: Heart Disease Risk 
+permalink: /metis/business/
 ---
-
-# Heart Disease Risk 
 
 ## Abstract
 
