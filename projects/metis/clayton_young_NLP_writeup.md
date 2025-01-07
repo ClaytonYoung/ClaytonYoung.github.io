@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Unsupervised NLP
-permalink: /unsupervisednlp/
+title: Topic modeling r/CryptoCurrency
+permalink: /metis/unsupervisednlp/
 ---
-# Topic modeling r/CryptoCurrency
 
 ## Abstract
 
