@@ -7,3 +7,5 @@ permalink: /metis/
 [Exploratory Data Anlysis](EDA)
 
 [Regression](regression)
+
+[Unsupervised NLP](unsupervisednlp)
