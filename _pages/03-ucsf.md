@@ -21,10 +21,11 @@ There were different parts to this process:
   - Walked data owners through inconsitencies with interactive examples and integrated fixed data
 - Built out a datadownloader application for non-superusers of the tool
 - Built a living, interactive data dictionary
-    
 - Taught researchers the importance and [basics of version control](/assets/github_tutorial.nb.html)
 
-
+  Here's the tutorial:
+  
+  
 I was given a list of instruments users of the data wanted which differed from the instruments found in the prior dataset. Tracking all of this down looked like this:
 
 [lol](/_pages/02_dataset_generation.html)
