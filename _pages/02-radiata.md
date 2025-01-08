@@ -5,4 +5,5 @@ permalink: /radiata/
 position: 02
 ---
 
-[This is the site](www.radiata.ai)
+<a href="https://www.radiata.ai" target="_blank" rel="noopener noreferrer">This is the site</a>
+
