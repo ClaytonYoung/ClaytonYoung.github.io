@@ -24,11 +24,15 @@ There were different parts to this process:
 - Taught researchers the importance and [basics of version control](/assets/github_tutorial.nb.html)
 
   Here's the tutorial:
+
+  <object data="../assets/Dataset-Builder-Guide.pdf" width="1000" height="1000" type='application/pdf'></object>
   
   
 I was given a list of instruments users of the data wanted which differed from the instruments found in the prior dataset. Tracking all of this down looked like this:
 
 [lol](/_pages/02_dataset_generation.html)
+
+
 
 
 
