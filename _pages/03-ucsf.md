@@ -30,8 +30,6 @@ This system:
 - Defined each data point together and implemented the corresponding logic
 - [Living, Interactive Data Dictionary](/assets/04_data_dictionary.html)
   - Maintains up-to-date documentation as new columns or instruments emerge.
- 
-###
 
 ### Quality Checks System
   - Stores the expected dataframe schema and outputs any incoming data inconsistencies
