@@ -29,7 +29,7 @@ This system:
 
 - Defined each data point together and implemented the corresponding logic
 - [Living, Interactive Data Dictionary](/assets/04_data_dictionary.html)
-  - Maintains up-to-date documentation as new columns or instruments emerge.
+  - Maintains up-to-date documentation as new columns or instruments emerge
 
 ### Quality Checks System
   - Stores the expected dataframe schema and outputs any incoming data inconsistencies
@@ -41,7 +41,7 @@ This system:
 
 - Built a user-friendly tool for non-superusers to download data
   - [This is an example of the app](https://clayton-young.shinyapps.io/data_downloader/)
-  - [Here's an example dataset](/assets/test_dataset_2023-10-23.csv) to upload and test. 
+  - [Here's an example dataset](/assets/test_dataset_2023-10-23.csv) to upload and test
 
 ### Teaching 
 
