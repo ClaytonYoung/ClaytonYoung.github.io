@@ -4,12 +4,52 @@ title: UCSF Memory and Aging Center
 permalink: /UCSFMAC/
 position: 3
 ---
+# Building a Comprehensive Dataset Management System at UCSF
 
-Academic research data is messy–this is a function of the high-turnover roles used to collect, organize, and analyze data. During the second half of my time at UCSF, I was brought in to make this process a little less painful for users of the data–I also wanted this process to be democratized. Out of the several goals during this project. 
+Academic research data can be messy due to the high turnover among those collecting, organizing, and analyzing it. In the latter half of my time at UCSF, I was asked to improve this process for researchers, with the goal of making data usage less painful and more accessible (i.e., “democratizing” the process). Among the various objectives of the project, I'm particularly proud of creating a system that allows users to build a new dataset or augment an existing one.
 
-I'm most proud of creating a system that users can use to build a new dataset or add on to an existing dataset. This stores versions of datasets and their source data, checks if the schema of incoming data is correct, and logs changes to the dataset(s). This also includes an application users can use to download specific instruments or columns from the wide format dataset. There's also a dictionary that's built and appended too if new cols or instruments are present. Every part of the dataset building is versioned. I trained researchers how to use this tool and documented all parts. 
+This system:
 
-There were different parts to this process:
+- Stores different versions of datasets and their source data
+- Checks if incoming data matches an expected schema
+- Logs changes made to the dataset(s)
+- Provides an application where users can download only the instruments or columns they need from a wide-format dataset
+- Includes a dynamic data dictionary that updates whenever new columns or instruments are added
+- Everything in the dataset building process is versioned, and I trained researchers on how to use this tool and included documentation.
+
+## Key Components of the Process
+
+### Discovery of User Needs & Data Archaeology
+
+- Explored a shared drive, organizational database, data collection sources, and older datasets
+- Identified missing IDs and created a [tutorial](/assets/Qualtrics_distributions.html) for addressing the root cause 
+
+### Collaboration with Users
+
+- Defined each data point together and implemented the corresponding logic
+- Quality Checks
+  - Created a system that stores the expected dataframe schema and outputs any inconsistencies
+  - Guided data owners through these inconsistencies with interactive examples and integrated corrected data
+    
+### Data Downloader Application
+
+- Built a user-friendly tool for non-superusers to download data
+- Living, Interactive Data Dictionary
+  - Maintains up-to-date documentation as new columns or instruments emerge
+
+### Teaching 
+
+- Illustrated the importance of version control and [created a GitHub basics tutorial](/assets/github_tutorial.nb.html)
+- Hosted training sessions to teach researchers how to use the tooling I created, including video and written documentation:
+  <object data="../assets/Dataset-Builder-Guide.pdf" width="1000" height="1000" type='application/pdf'></object>
+- the 
+
+## Explore the Tools
+Full Dataset Builder Tutorial
+[Interactive markdown with most code](/assets/02_dataset_generation.html)
+[Data Downloader Application](https://clayton-young.shinyapps.io/data_downloader/)
+ - This is an example of the app. [Here's an example dataset](test_dataset_2023-10-23.csv) to upload and test. 
+
 
 - Discovery of user needs and data archaeology
     - Combing through a shared drive, the org database, data collection sources, and prior datasets 
@@ -25,7 +65,7 @@ There were different parts to this process:
 
   Here's the full dataset builder tutorial:
 
-<object data="../assets/Dataset-Builder-Guide.pdf" width="1000" height="1000" type='application/pdf'></object>
+
 
 [link to the interactive markdown with most code](/assets/02_dataset_generation.html)
 
