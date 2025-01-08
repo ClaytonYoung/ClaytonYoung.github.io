@@ -13,4 +13,3 @@ I've spent the past few years in academia investigating decision-making in older
 
 Enjoy using both R and Python!
 
-<object data="/assets/Dataset-Builder-Guide.pdf" width="1000" height="1000" type="application/pdf"></object>
