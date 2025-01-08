@@ -46,9 +46,9 @@ This system:
 
 ## Explore the Tools
 Full Dataset Builder Tutorial
-[Interactive markdown with most code](/assets/02_dataset_generation.html)
-[Data Downloader Application](https://clayton-young.shinyapps.io/data_downloader/)
- - This is an example of the app. [Here's an example dataset](test_dataset_2023-10-23.csv) to upload and test. 
+- [Interactive markdown with most code](/assets/02_dataset_generation.html)
+- [Data Downloader Application](https://clayton-young.shinyapps.io/data_downloader/)
+ - This is an example of the app. [Here's an example dataset](/assets/test_dataset_2023-10-23.csv) to upload and test. 
 
 
 - Discovery of user needs and data archaeology
