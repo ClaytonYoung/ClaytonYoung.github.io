@@ -23,14 +23,17 @@ There were different parts to this process:
 - Built a living, interactive data dictionary
 - Taught researchers the importance and [basics of version control](/assets/github_tutorial.nb.html)
 
-  Here's the tutorial:
+  Here's the full dataset builder tutorial:
 
-  <object data="../assets/Dataset-Builder-Guide.pdf" width="1000" height="1000" type='application/pdf'></object>
-  
+<object data="../assets/Dataset-Builder-Guide.pdf" width="1000" height="1000" type='application/pdf'></object>
+
+[link to the interactive markdown with most code](/assets/02_dataset_generation.html)
+
+[And here is the data downloader application](https://clayton-young.shinyapps.io/data_downloader/)
   
 I was given a list of instruments users of the data wanted which differed from the instruments found in the prior dataset. Tracking all of this down looked like this:
 
-[lol](/_pages/02_dataset_generation.html)
+
 
 
 
