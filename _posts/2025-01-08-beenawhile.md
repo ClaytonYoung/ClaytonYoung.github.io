@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Too long
-date: 2024-01-08
+date: 2025-01-08
 ---
 
 I'll try to just write and not think too much about it or feed my thoughts into an LLM. 
