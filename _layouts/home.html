@@ -6,6 +6,12 @@ layout: default
 
 <div class="home">
 
+    % assign about_page = site.pages | where: "permalink", "/about/" | first %}
+    {% if about_page %}
+        <div class="about-content">
+            <h1>{{ about_page.title }}</h1>
+            {{ about_page.content }}
+        </div>
+    {% endif %}
     <!-- {% include posts_list.html %} -->
-
 </div>
