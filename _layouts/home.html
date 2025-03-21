@@ -1,14 +1,11 @@
----
+<!-- ---
 # layout for home page
+# currently simply shows a paginated listing of posts
 layout: default
 ---
 
 <div class="home">
-    {% assign about_page = site.pages | where: "permalink", "/about/" | first %}
-    {% if about_page %}
-        <div class="about-content">
-            <h1>{{ about_page.title }}</h1>
-            {{ about_page.content }}
-        </div>
-    {% endif %}
-</div>
+
+    {% include posts_list.html %}
+
+</div> -->

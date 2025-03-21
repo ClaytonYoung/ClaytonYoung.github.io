@@ -1,6 +1,8 @@
 ---
 layout: page
+title: About Me
 permalink: /about/
+order: 1
 ---
 
 I am an Engineer currently developing a **neuroimaging web application** that leverages **AI/ML** for **biomarker discovery**.  We use user-uploaded and open-source data to fuel innovation within this field. I am also proficient in establishing and automating CI/CD pipelines for the deployment of applications on AWS using GitHub Actions.  
