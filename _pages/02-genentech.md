@@ -11,9 +11,9 @@ I build and deploy internal applications that enable scientists to generate, rev
 
 ## Application Development
 
-#### Reusable R Shiny Templates:
+#### Reusable Application Templates:
 
-- Developed reusable R Shiny application templates to standardize UI patterns and accelerate delivery of new internal tools.
+- Developed reusable application templates to standardize UI patterns and accelerate delivery of new internal tools.
 
 #### Report Editing & Validation:
 
@@ -28,7 +28,7 @@ I build and deploy internal applications that enable scientists to generate, rev
 ## Technical Skills Utilized
 
 #### Languages & Frameworks:
-- R, R Shiny, Python
+- Python, Shiny
 
 #### Focus Areas:
 - AI Enablement, Internal Tooling, Report Automation, Data Workflows
